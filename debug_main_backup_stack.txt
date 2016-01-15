@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+#include <iostream>
+#include "stack.h"
+using namespace std;
+
+int main()
+{
+
+    startStack myTest;
+
+    string types;
+    string licenses;
+    int capacity;
+    int escape;
+    int recNumber;
+
+
+    myTest.topNode = NULL;
+    myTest.counter = 0;
+
+
+   do {
+
+      cout << "Enter types: " << endl;
+      cin >> types;
+      cout << "Enter license" << endl;
+      cin >> licenses;
+      cout << "Enter pax #" << endl;
+      cin >> capacity;
+
+      push(myTest,types,licenses,capacity);
+
+      cout << "would you like to enter more? (0 to exit) ";
+      cin >> escape;
+
+
+   }while(escape != 0);
+
+   pop(myTest);
+
+
+  recNumber = getsStackCount(myTest);
+
+  toString(myTest);
+  cout << endl << "number of rec: " << recNumber << endl;
+
+
+}
