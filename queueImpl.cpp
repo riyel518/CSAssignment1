@@ -41,7 +41,7 @@ void createEmptyQueue(startQueue& queueList){
     }
 
     queueList.back = NULL;
-
+    queueList.queueCounter = 0;
 }
 void enQueue(startQueue& queueList, int numWaitingCustomer){
 

@@ -87,7 +87,7 @@ void push(startStack& topOfStack, string vehicleType,  string vehicleLicense, in
 // CALLS TO: List of user-defined functions called (names only)
 //**********************************************************************
 
-void pop(startStack& topOfStack);
+void pop(startStack& topOfStack, string& tempLicense, int& numAvail);
 
 //*********************************************************************
 // FUNCTION: isEmptyStack

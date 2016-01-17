@@ -95,7 +95,7 @@ void push(startStack& topOfStack, string vehicleType,  string vehicleLicense, in
 //**********************************************************************
 
 
-void pop(startStack& topOfStack) {
+void pop(startStack& topOfStack, string& tempLicense, int& numAvail) {
 
 
   	 vehicle *temp;            //pointer to deallocate a pop node in stack
@@ -114,8 +114,10 @@ void pop(startStack& topOfStack) {
 
                		 temp = topOfStack.topNode;           		          // assigned the top of the node to the temp pointer
                		 topOfStack.topNode = topOfStack.topNode->nextVehicle;          //advance or assigned the next pointer to the top of the stack
+                   tempLicense = temp->vehicleLicencse;
+                   numAvail = temp->vechicleCapacity;
               		 delete temp;                                                                                  //deallocate memory
-                     topOfStack.counter--;                                                                   //decrement the counter
+                   topOfStack.counter--;                                                                   //decrement the counter
 
 
        	 } //end of else statment
